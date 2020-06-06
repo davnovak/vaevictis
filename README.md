@@ -20,6 +20,9 @@ In R
 reticulate::py_install("git+https://github.com/stuchly/vaevictis.git@4e2335a6706c9e966783a7f3957f804214d9c290",pip=TRUE)
 ```
 
+## Preprocess
+It is recommended to standardize the data prior to analysis (e.g. divide the channels by 0.99 percentil) to avoid numerical problems. This step is not done internally to avoid issues with application already trained model on new data.
+
 ## Example (R)
 ```
 vae<-reticulate::import("vaevictis")
